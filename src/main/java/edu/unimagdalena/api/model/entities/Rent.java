@@ -2,6 +2,7 @@ package edu.unimagdalena.api.model.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "rents")
 @Entity
 public class Rent {
@@ -34,9 +36,7 @@ public class Rent {
     @Column(name = "end_date")
     private LocalDate endDate;
 
-    @Column(name = "state")
-    private State state;
-
     @Column(name = "total_price")
     private Float totalPrice;
+
 }

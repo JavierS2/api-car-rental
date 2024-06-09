@@ -38,7 +38,7 @@ public class Car {
     @Column(name = "end_date_available")
     private LocalDate endDateAvailable;
 
-    @OneToMany(mappedBy = "car")
-    private List<Rent> rents;
+    //@OneToMany(mappedBy = "car")
+    //private List<Rent> rents;
 }
 
