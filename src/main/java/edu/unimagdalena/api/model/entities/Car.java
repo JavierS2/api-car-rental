@@ -35,10 +35,14 @@ public class Car {
     private Float pricePerDay;
 
     @Temporal(TemporalType.DATE)
+    @Column(name = "start_date_available")
+    private LocalDate startDateAvailable;
+
+    @Temporal(TemporalType.DATE)
     @Column(name = "end_date_available")
     private LocalDate endDateAvailable;
 
-    @OneToMany(mappedBy = "car")
-    private List<Rent> rents;
+    @Column(name = "img_url")
+    private String imgUrl;
 }
 
