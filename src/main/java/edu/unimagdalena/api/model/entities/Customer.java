@@ -33,7 +33,4 @@ public class Customer {
     @Column(name = "address")
     private String address;
 
-    //@OneToMany(mappedBy = "customer")
-    //private List<Rent> rents;
-
 }

@@ -3,16 +3,15 @@ package edu.unimagdalena.api.controller;
 import edu.unimagdalena.api.exceptions.ResourceNotAbleToDeleteException;
 import edu.unimagdalena.api.exceptions.ResourceNotFoundException;
 import edu.unimagdalena.api.model.dto.CustomerDTO;
-import edu.unimagdalena.api.service.CustomerService;
 import edu.unimagdalena.api.service.CustomerServiceImpl;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 @RequestMapping("/api/v1/customers")
 public class CustomerController {
 

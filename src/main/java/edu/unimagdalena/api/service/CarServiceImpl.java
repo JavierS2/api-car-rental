@@ -43,7 +43,9 @@ public class CarServiceImpl implements CarService {
         carInDb.setYear(carDTO.year());
         carInDb.setLocation(carDTO.location());
         carInDb.setPricePerDay(carDTO.pricePerDay());
+        carInDb.setStartDateAvailable(carDTO.startDateAvailable());
         carInDb.setEndDateAvailable(carDTO.endDateAvailable());
+        carInDb.setImgUrl(carDTO.imgUrl());
 
         carRepository.save(carInDb);
         return CarMapper.INSTANCE.carToCarDTO(carInDb);

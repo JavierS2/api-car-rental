@@ -15,11 +15,11 @@ public record RentDTO (
         Long customerId,
 
         @NotNull(message = "Start date is mandatory")
-        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
         LocalDate startDate,
 
         @NotNull(message = "End date is mandatory")
-        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
         LocalDate endDate,
 
         @NotNull(message = "Total price is mandatory")

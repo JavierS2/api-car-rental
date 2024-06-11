@@ -30,7 +30,14 @@ public record CarDTO (
         @Positive
         Float pricePerDay,
 
+        @NotNull(message = "Start date available is mandatory")
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+        LocalDate startDateAvailable,
+
         @NotNull(message = "End date available is mandatory")
-        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
-        LocalDate endDateAvailable
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+        LocalDate endDateAvailable,
+
+        @NotBlank(message = "Image is mandatory")
+        String imgUrl
 ) { }
